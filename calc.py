@@ -116,7 +116,7 @@ def solve_tokens(tokens):
 
 
 def solve(expr):
-    return solve_tokens(parse_expression_to_tokens(to_solve))
+    return solve_tokens(parse_expression_to_tokens(expr))
 
 
 def main():
