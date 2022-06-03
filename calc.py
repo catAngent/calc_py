@@ -113,10 +113,14 @@ def solve_tokens(tokens):
                 tokens = tokens[:c-1] + op.func(tokens[c-1], tokens[c+1]) + tokens[c+2:]
 
 
+def solve(expr):
+    return solve_tokens(parse_expression_to_tokens(to_solve))
+
+
 def main():
 
     to_solve = input("what you want to solve? ")
-    print("solved!", solve_tokens(parse_expression_to_tokens(to_solve)))
+    print("solved!", solve(to_solve))
     # [print(i) for i in parse_expression_to_tokens(to_solve)]
 
 
